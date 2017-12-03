@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Game</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+	<script>
+
+		var count = 0 ;
+		function showimage1(){
+			var elem = document.getElementById("cup");
+			elem.style.display = "block";
+			count=count + 100;
+			document.getElementById('counter').innerHTML = count;
+			console.log(count);
+
+			if(count == 400){
+				alert("Congrats! You Won");
+			}
+			
+		}
+		function showimage2(){
+			var elem = document.getElementById("broom");
+			elem.style.display = "block";
+			count=count + 100;
+			document.getElementById('counter').innerHTML = count;
+
+			if(count == 400){
+				alert("Congrats! You Won");
+			}
+		}
+		function showimage3(){
+			var elem = document.getElementById("bottle");
+			elem.style.display = "block";
+			count=count + 100;
+			document.getElementById('counter').innerHTML = count;
+
+			if(count == 400){
+				alert("Congrats! You Won");
+			}
+		}
+		function showimage4(){
+			var elem = document.getElementById("watch");
+			elem.style.display = "block";
+			count=count + 100;
+			document.getElementById('counter').innerHTML = count;
+
+			if(count == 400){
+				alert("Congrats! You Won");
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2 top-score">Score: <span id="counter">0</span></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2"></div>
+    		<div class="col-sm-4" >
+    			<img src="Original-image.png" usemap="#Map" style="cursor:pointer;" class="animated  bounceInLeft">
+    				<img src="cup.png" style="display:none;" id="cup"/>
+    				<img src="broom.png" style="display:none;" id="broom"/>
+    				<img src="bottle.png" style="display:none;" id="bottle"/>
+    				<img src="watch.png" style="display:none;" id="watch"/>
+							<map name="Map" id="Map" style="	cursor:auto;">
+							    <area onclick="showimage1()" shape="poly" coords="97,399,97,415,128,415,127,398" />
+							    <area onclick="showimage2()" shape="poly" coords="173,272,198,325,187,395,186,409,206,409,215,384,209,331,209,304,191,276" />
+							    <area onclick="showimage3()" shape="poly" coords="297,426,293,504,335,503,322,432" />
+							    <area onclick="showimage4()" shape="poly" coords="82,259,87,284,102,277,97,264" />
+							</map>
+    		</div>
+    		<div class="col-sm-4">
+    			<img src="Final-image.png" class="animated bounceInRight">
+
+    		</div>
+    	</div>
+	</div>
+
+
+</body>
+</html>

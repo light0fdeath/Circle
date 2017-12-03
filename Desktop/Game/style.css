@@ -1,0 +1,30 @@
+.top-score{
+	text-align:right;
+	height:60px;
+	vertical-align: middle;
+	padding-right:12%;
+	font-size: 30px;
+	font-weight: bold;
+}
+img{
+	position:absolute !important;
+	cursor:auto;
+}
+
+#cup{
+	left:112px;
+	top:389px;
+	cursor:auto;
+}
+#broom{
+	left:184px;
+	top:265px;
+}
+#bottle{
+	left:309px;
+	top:423px;
+}
+#watch{
+	left:99px;
+	top:259px;
+}
